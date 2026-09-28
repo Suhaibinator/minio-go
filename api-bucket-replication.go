@@ -26,8 +26,8 @@ import (
 	"net/http"
 	"net/url"
 	"time"
+	"uuid"
 
-	"github.com/google/uuid"
 	"github.com/minio/minio-go/v7/pkg/replication"
 	"github.com/minio/minio-go/v7/pkg/s3utils"
 )
@@ -219,11 +219,7 @@ func (c *Client) GetBucketReplicationMetrics(ctx context.Context, bucketName str
 
 // mustGetUUID - get a random UUID.
 func mustGetUUID() string {
-	u, err := uuid.NewRandom()
-	if err != nil {
-		return ""
-	}
-	return u.String()
+	return uuid.New().String()
 }
 
 // ResetBucketReplication initiates replication of previously replicated objects.

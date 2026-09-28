@@ -1,6 +1,6 @@
 module github.com/minio/minio-go/examples/s3
 
-go 1.25.0
+go 1.27.0
 
 // Overridden by `replace` below, to point all versions at the local minio-go source, so version shouldn't matter here.
 require github.com/minio/minio-go/v7 v7.0.73
@@ -15,7 +15,6 @@ require (
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/clipperhouse/uax29/v2 v2.7.0 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
-	github.com/google/uuid v1.6.0 // indirect
 	github.com/klauspost/compress v1.19.2 // indirect
 	github.com/klauspost/cpuid/v2 v2.4.0 // indirect
 	github.com/klauspost/crc32 v1.3.0 // indirect

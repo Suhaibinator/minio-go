@@ -28,8 +28,8 @@ import (
 	"sort"
 	"strings"
 	"sync"
+	"uuid"
 
-	"github.com/google/uuid"
 	"github.com/minio/minio-go/v7/pkg/s3utils"
 )
 

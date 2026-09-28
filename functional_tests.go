@@ -46,9 +46,9 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"uuid"
 
 	"github.com/dustin/go-humanize"
-	"github.com/google/uuid"
 
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/cors"
@@ -3809,7 +3809,7 @@ func testGetObjectAttributesErrorCases() {
 	}
 
 	_, err = c.GetObjectAttributes(context.Background(), bucketNameV, unknownObject, minio.ObjectAttributesOptions{
-		VersionID: uuid.NewString(),
+		VersionID: uuid.New().String(),
 	})
 	if err == nil {
 		logError(testName, function, args, startTime, "", "GetObjectAttributes with empty bucket name should have failed", nil)
